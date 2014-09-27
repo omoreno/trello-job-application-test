@@ -1,0 +1,84 @@
+<html>
+	<head>
+		<script type="text/javascript">
+			function hash(str){
+				var h = 7;
+			    var letters = "acdegilmnoprstuw";
+			    for(var i = 0; i < str.length; i++)
+			        h = (h * 37 + letters.indexOf(str[i]));
+
+			    return h;
+			};
+
+			function unhash(token){
+				var h = 7;
+				var multiplier = 37;
+				var letters = "acdegilmnoprstuw";
+				var str = "";
+				while (token != h) {
+					if (token < h)
+						throw "Invalid token";
+					var index = token % multiplier;
+					str = letters[index] + str;
+					token = Math.floor(token / multiplier);
+				}
+				return str;
+			};
+
+			function hashText(){
+				var str = document.getElementById("plainTextInput").value;
+				var hashed = hash(str);
+				document.getElementById("hashed").innerHTML = hashed;
+			};
+
+			function unhashToken(){
+				var token = document.getElementById("hashedInput").value;
+				try {
+					var unhashed = unhash(token);
+					document.getElementById("unhashed").innerHTML = unhashed;
+				} catch (ex) {
+					document.getElementById("unhashed").innerHTML = ex;	
+				}
+			};
+		</script>
+	</head>
+	<body>
+		<label>Text to hash: </label>
+		<input type="text" id="plainTextInput"/>
+		<button type="hash" id="hash" onclick="hashText()">Hash Text</button>
+		<span id="hashed"></span>
+		<br />
+		<label>Token to Unhash: </label>
+		<input type="text" id="hashedInput"/>
+		<button type="hash" id="unhash" onclick="unhashToken()">Unhash Token</button>
+		<span id="unhashed"></span>
+		<p>This was a challenge to apply for a job in trello, I didn't apply but was fun solve it :). <a href="https://trello.com/jobs/developer">https://trello.com/jobs/developer</a></p>
+		<pre>
+How to apply...
+
+Find a 9 letter string of characters that contains only letters from
+
+acdegilmnoprstuw
+
+such that the hash(the_string) is
+
+956446786872726
+
+if hash is defined by the following pseudo-code:
+
+Int64 hash (String s) {
+    Int64 h = 7
+    String letters = "acdegilmnoprstuw"
+    for(Int32 i = 0; i < s.length; i++) {
+        h = (h * 37 + letters.indexOf(s[i]))
+    }
+    return h
+}
+
+For example, if we were trying to find the 7 letter string where hash(the_string) was 680131659347, the answer would be "leepadg".
+To apply, please email jobs@trello.com with your solution as the first word in the subject line.
+Include any code you used to solve the problem as an attachment, and also send us a current resume in HTML, Plain Text, or PDF format.
+In the body of the email please explain why you would be a good fit for this job. If you have a website, send us the URL! 
+		</pre>
+	</body>
+</html>
