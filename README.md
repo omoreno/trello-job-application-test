@@ -7,13 +7,7 @@
 ### The challenge itself ###
 How to apply...
 
-Find a 9 letter string of characters that contains only letters from
-
-acdegilmnoprstuw
-
-such that the hash(the_string) is
-
-956446786872726
+Find a 9 letter string of characters that contains only letters from acdegilmnoprstuw such that the hash(the_string) is 956446786872726
 
 if hash is defined by the following pseudo-code:
 
