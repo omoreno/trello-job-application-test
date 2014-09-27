@@ -17,7 +17,6 @@ such that the hash(the_string) is
 
 if hash is defined by the following pseudo-code:
 
-`
 Int64 hash (String s) {
 
     Int64 h = 7
@@ -33,5 +32,4 @@ Int64 hash (String s) {
     return h
 
 }
-`
 For example, if we were trying to find the 7 letter string where hash(the_string) was 680131659347, the answer would be "leepadg".
