@@ -2,7 +2,7 @@
 
 ### What is this repository for? ###
 
-* This was a challenge to apply for a job in trello, I didn't apply but was fun solve it :). https://trello.com/jobs/developer
+This was a challenge to apply for a job in trello, I didn't apply but was fun solve it :). https://trello.com/jobs/developer
 
 ### The challenge itself ###
 How to apply...
@@ -25,4 +25,4 @@ For example, if we were trying to find the 7 letter string where hash(the_string
 
 To apply, please email jobs@trello.com with your solution as the first word in the subject line.
 Include any code you used to solve the problem as an attachment, and also send us a current resume in HTML, Plain Text, or PDF format.
-In the body of the email please explain why you would be a good fit for this job. If you have a website, send us the URL! 
+In the body of the email please explain why you would be a good fit for this job. If you have a website, send us the URL!
